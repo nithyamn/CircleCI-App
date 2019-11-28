@@ -36,7 +36,8 @@ jobs:
             echo "App upload failed, reason : ",$UPLOAD_ERROR_MESSAGE
             exit 1;
           fi
-      - run: 
+      - 
+        run: 
           ./gradlew test
       -
         store_test_results:
