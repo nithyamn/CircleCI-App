@@ -18,10 +18,7 @@ jobs:
             - ~/.m2
           key: 'CircleCI-App-{{ checksum "pom.xml" }}'
       -
-        run: ./gradlew assembleDebug
-        
-      -
-        run:
+        run: 
           ./gradlew assembleDebug
       -
         run:
