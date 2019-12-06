@@ -18,7 +18,7 @@ jobs:
             - ~/.m2
           key: 'CircleCI-App-{{ checksum "pom.xml" }}'
       -
-        run: './gradlew assembleDebug'
+        run: ./gradlew assembleDebug
       -
         run:
           name: 'App upload and Set app id in environment variable.'
