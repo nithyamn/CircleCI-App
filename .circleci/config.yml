@@ -10,7 +10,6 @@ jobs:
       -
         restore_cache:
           key: 'CircleCI-App-{{ checksum "pom.xml" }}'
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       -
         run: 'mvn dependency:go-offline'
       -
