@@ -21,6 +21,9 @@ jobs:
         run: 
           working_directory: ~/CircleCI-App
           command: gradle wrapper
+      -
+        run:
+          working_directory: ~/CircleCI-App
           command: ./gradlew assembleDebug
       -
         run:
