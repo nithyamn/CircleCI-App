@@ -20,8 +20,7 @@ jobs:
       -
         run: 
           working_directory: ~/CircleCI-App
-          command: ./gradlew androidDependencies
-          command: ./gradlew assembleDebug
+          command: ./gradlew dependencies
       -
         run:
           name: 'App upload and Set app id in environment variable.'
