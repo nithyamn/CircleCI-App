@@ -21,6 +21,7 @@ jobs:
         run: 
           working_directory: ~/CircleCI-App
           command: gradle wrapper
+          command: ./gradlew assembleDebug
       -
         run:
           name: 'App upload and Set app id in environment variable.'
