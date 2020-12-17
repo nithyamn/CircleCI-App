@@ -1,18 +1,18 @@
 version: 2
 jobs:
     build:
-        working_directory: ~/browserstack-appium-android
+        working_directory: ~/CircleCI-App
         docker:
             - image: 'circleci/openjdk:8-jdk-stretch'
         steps:
             - checkout
             - restore_cache:
-                key: 'browserstack-appium-android-{{ checksum "pom.xml" }}'
+                key: 'CircleCI-App-{{ checksum "pom.xml" }}'
             - run: 'mvn dependency:go-offline'
             - save_cache:
                 paths:
                   - ~/.m2
-                key: 'browserstack-appium-android-{{ checksum "pom.xml" }}'
+                key: 'CircleCI-App-{{ checksum "pom.xml" }}'
             - run: 'mvn test -P single'
             - store_test_results:
                 path: target/surefire-reports
